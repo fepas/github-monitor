@@ -2,7 +2,9 @@ FROM node:latest
 
 RUN mkdir /app/
 WORKDIR /app/
-ADD . /app/
+
+COPY . /app/
+
 RUN npm install
 
 CMD ["npm", "run", "webpack"]

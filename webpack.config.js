@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-var */
 var path = require('path');
 var webpack = require('webpack');
 var BundleTracker = require('webpack-bundle-tracker');
@@ -17,7 +19,16 @@ module.exports = {
 
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' }
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-react'],
+          },
+        },
+      },
     ],
   },
 
@@ -26,6 +37,6 @@ module.exports = {
       'node_modules',
       path.resolve(__dirname, 'assets/js'),
     ],
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
 };
