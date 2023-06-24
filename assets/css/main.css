@@ -12,6 +12,11 @@
   border-radius: 35px;
 }
 
+.img-profile {
+  width: 30px;
+  border-radius: 35px;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -85,7 +90,8 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.sidebar-nav li a:active, .sidebar-nav li a:focus {
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
   text-decoration: none;
 }
 
@@ -108,19 +114,24 @@ body {
   #wrapper {
     padding-left: 0;
   }
+
   #wrapper.toggled {
     padding-left: 250px;
   }
+
   #sidebar-wrapper {
     width: 0;
   }
+
   #wrapper.toggled #sidebar-wrapper {
     width: 250px;
   }
+
   #page-content-wrapper {
     padding: 20px;
     position: relative;
   }
+
   #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0;
